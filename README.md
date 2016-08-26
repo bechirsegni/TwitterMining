@@ -44,9 +44,10 @@ Endpoints:
 
   Visualize Data on Map Chart
   -----------
-![alt tag](./config/map.png)
 
 Simply change the json file Inside the web/map folder and the path inside map.js
+![alt tag](./config/map.png)
+
 ```
 var markers = [];
   $.getJSON("apple.json", function(json) {
