@@ -8,7 +8,7 @@ require 'benchmark'
 
 Benchmark.bm do |bm|
   bm.report {
-  tweets = search("Samsung", "en", 5)
+  tweets = search("google", "en", 3)
   path = store(tweets)
   stat = status(path)
   clean = words(stat)

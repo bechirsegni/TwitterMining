@@ -34,7 +34,7 @@ end
 def count(data)
   sorted = data.sort_by {|_key, value| value}.reverse.to_h
   final_data = sorted.to_json
-  File.open(@file_frequency,"w") do |f|
+  File.open("./Data/#{@fname}frequency.json","w") do |f|
     f.write(final_data)
   end
   File.delete(@file_frequency)
