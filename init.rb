@@ -3,10 +3,10 @@ require_relative 'helper/save'
 
 require 'json'
 
-tweets = search("pokemongo", "en", 30)
-path = store(tweets)
-geo  = geocode(path)
-done = analyse(geo)
-stat = status(done)
-clean = words(stat)
-count(clean)
+  tweets = search("nike", "en", 300)
+  path = store(tweets)
+  stat = status(path)
+  clean = words(stat)
+  count(clean)
+  geo  = geocode(path)
+  analyse(geo)

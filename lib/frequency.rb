@@ -1,18 +1,11 @@
-require 'stopwords'
-
-STOPWORDS = /\b(?:#{ %w[to and or the you our a RT amp are https nil].join('|') })\b/i
+require_relative '../helper/stopwords.rb'
 
 def status(path)
   words = []
   data = JSON.parse( IO.read(path, encoding:'utf-8') )
   data.each {|object| object["text"].gsub!(STOPWORDS, '')}
-  data.each {|object| words << object["text"].gsub!(/\B[@#]\S+\b/, '')}
-
-  filter = Stopwords::Snowball::Filter.new "en"
-  clean  = filter.filter words.to_s.split
-
+  clean = data.each {|object| words << object["text"].gsub!(/\B[@#]\S+\b/, '')}
   @fname = path.split('/')[2].split(".").first
-
   File.open("./Data/#{@fname}text.txt", "w+") do |f|
     clean.each { |element| f.puts(element) }
   end
