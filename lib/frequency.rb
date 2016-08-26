@@ -14,7 +14,7 @@ def status(path)
   File.open(file_path, "w+") do |f|
     words.each { |element| f.puts(element) }
   end
-  return file
+  return file_path
 end
 
 def words(file)
