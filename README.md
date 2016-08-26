@@ -46,6 +46,7 @@ Endpoints:
   -----------
 
 Simply change the json file Inside the web/map folder and the path inside map.js
+
 ![alt tag](./config/map.png)
 
 ```
