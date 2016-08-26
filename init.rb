@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file }
 require_relative 'helper/save'
 
