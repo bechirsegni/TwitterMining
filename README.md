@@ -31,4 +31,12 @@ go ahead to init.rb and change the values in the search function and run
 ```
 ruby init.rb
 ```
-The output should be located at Data Folder in json format
+The output should be located at Data Folder in json format or you can use simple API for you data
+
+```
+# Accessible via http://localhost:4567
+ruby api.rb
+```
+Endpoints:
+  - /:filename will open the full json Data
+  - /f/:filename will open the frequency Data
