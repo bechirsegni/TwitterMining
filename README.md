@@ -1,5 +1,6 @@
 # TwitterMining
 This project is a very simple Mining of twitter data with ruby , Text Pre-processing to gather Term Frequencies, Simple Sentiment Analysis and tweets Geolocation.
+![alt tag](./config/ios.png)
 
 Quick guide
 -----------

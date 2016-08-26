@@ -5,7 +5,7 @@ Chart.defaults.scale.ticks.beginAtZero = true
 var keys = [];
 var values = [];
 
-$.getJSON("nikefrequency.json", function(json) {
+$.getJSON("IOSfrequency.json", function(json) {
   $.each(json, function(k, v) {
     keys.push(k);
     values.push(v);
@@ -18,7 +18,7 @@ var lineChart = new Chart(CHART, {
         labels: keys.slice(0,15),
         datasets: [
             {
-                label: "Words frequency Based on 100 tweets about ruby",
+                label: "Words frequency Based on 300 tweets about IOS",
                 fill: false,
                 lineTension: 0.1,
                 backgroundColor: "rgba(75,192,192,0.4)",
@@ -47,7 +47,7 @@ var lineChart = new Chart(CHART, {
 var sentiment = [];
 var scores = [];
 
-$.getJSON("nike.json", function(json) {
+$.getJSON("IOS.json", function(json) {
 
   $.each(json, function(k, v) {
   sentiment.push(v.sentiment);
@@ -62,7 +62,7 @@ var radarChart = new Chart(RADAR, {
         labels: sentiment,
         datasets: [
             {
-                label: "Sentimental Based on 100 tweets about ruby",
+                label: "Sentimental Based on 300 tweets about IOS",
                 fill: false,
                 lineTension: 0.1,
                 backgroundColor: "rgba(75,192,192,0.4)",
