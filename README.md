@@ -41,3 +41,23 @@ ruby api.rb
 Endpoints:
   - /:filename will open the full json Data
   - /f/:filename will open the frequency Data
+
+  Visualize Data on Map Chart
+  -----------
+![alt tag](./config/map.png)
+
+Simply change the json file Inside the web/map folder and the path inside map.js
+```
+var markers = [];
+  $.getJSON("apple.json", function(json) {
+  $.each(json, function(k, v) {
+  markers.push({
+            "zoomLevel": 5,
+            "scale": 0.5,
+            "title": v.text,
+            "latitude":  v.lat,
+            "longitude": v.lng,
+          });
+});});
+
+```
